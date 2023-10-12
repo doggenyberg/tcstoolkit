@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(226, 226, 226);
+    background-color: rgb(49, 49, 49);
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 15rem 20rem 20rem;
+    gap: 2rem;
+}
+
+.bottom .left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bottom .left .widget {
+    padding: 1.5rem 1rem;
+    border-radius: 18px;
+    -webkit-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.58);
+    -moz-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.58);
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.58);
+}
+
+.bottom .left .time {
+    height: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(226,226,226);
+    background: linear-gradient(357deg, rgb(161, 161, 161) 0%, rgba(255,255,255,1) 100%);
+    color: rgb(57, 49, 49);
+    font-size: 3rem;
+}
+
+.bottom .left .weather {
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(53, 53, 53, 0.7), rgba(115, 115, 115, 0.6)), url('../resources/img/months/dec.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bottom .left .weather #day {
+    font-weight: 500;
+    color: rgb(255, 196, 0);
+}
+
+.bottom .left .weather #date {
+    font-weight: 400;
+}
+
+.bottom .left .weather .temp-container {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+}
+
+.mid
