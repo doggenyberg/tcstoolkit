@@ -10,6 +10,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: rgb(226, 226, 226);
     background-color: #1A1A1A;
+    user-select: none;
 }
 
 .wrapper {
@@ -20,9 +21,17 @@ body {
     font-size: 24px;
 }
 
+.top {
+    margin-bottom: 2rem;
+}
+
+.top h1 {
+    font-weight: 500;
+}
+
 .bottom {
     display: grid;
-    grid-template-columns: 15rem 30rem 20rem;
+    grid-template-columns: 15rem 30rem 32rem;
     gap: 2rem;
 }
 
@@ -131,7 +140,7 @@ body {
     font-weight: 400;
     letter-spacing: 1px;
     /* background: linear-gradient(220deg, #a83e8a 0%, #5c386c 100%); */
-    background-color: #a37cbc;
+    background-color: #555188;
     align-items: center;
     justify-content: center;
     padding: 2rem;
@@ -139,4 +148,16 @@ body {
     -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.344);
     -moz-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.344);
     box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.344);
+    transition: all 50ms ease-in-out;
+    cursor: pointer;
+}
+
+.mid .buttons .button:hover {
+    background-color: #6561a2;
+    transform: scale(1.02);
+}
+
+.right {
+    background-color: #1ece5c;
+    border-radius: 25px;
 }
