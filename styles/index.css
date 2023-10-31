@@ -91,13 +91,14 @@ body {
 .bottom .left .weather .temp-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    align-items: flex-end;
     font-size: 2.5rem;
 }
 
 .bottom .left .weather .temp-container p {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 300;
+    margin-right: 0.5rem;
 }
 
 .mid {

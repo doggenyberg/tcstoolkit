@@ -6,7 +6,25 @@ const day = document.getElementById("day");
 const dateMonthYear = document.getElementById("dateMonthYear");
 const temp = document.getElementById("temp");
 
-// get weather status
+const aftonbladetBtn = document.getElementById("aftonbladet");
+const foodCoBtn = document.getElementById("foodCo");
+const teleoptiBtn = document.getElementById("teleopti");
+
+// function to open links on link-buttons
+function openLink(button) {
+    switch (button) {
+        case "aftonbladet":
+            window.open("https://www.aftonbladet.se/", "_blank");
+            break;
+    }
+}
+
+// eventlisteners for link-buttons
+aftonbladetBtn.addEventListener("click", function() {
+    openLink("aftonbladet");
+});
+
+// update HTML elements
 updateWeather();
 
 // function that updates the time & date every second
@@ -18,6 +36,7 @@ setInterval(() => {
     dateMonthYear.innerHTML = `${dates[0]} ${convertMonth(dates[1])} ${dates[2]}`; 
 }, 1000)
 
+// function that gets the date and time and returns an array
 function getDates() {
     let d = new Date();
     let date = d.getDate();
@@ -30,6 +49,7 @@ function getDates() {
     return dates;
 }
 
+// function to convert the day to a string
 function translateDay(day) {
     switch (day) {
         case 1:
@@ -49,6 +69,7 @@ function translateDay(day) {
     }
 }
 
+// function that convert the month to a string
 function convertMonth(month) {
     switch (month) {
         case 0:
@@ -78,13 +99,14 @@ function convertMonth(month) {
     }
 }
 
-
+// OpenWatherMap API call
 async function getWeather() {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=59.40316&lon=17.94479&appid=6c54c157dd0a9f4ebb1b0909374b6133&units=metric`)
     const weather = await response.json();
     return weather;
 } 
 
+// function that updates the HTML from getWeather()
 async function updateWeather() {
     const data = await getWeather();
     const dataTemp = data.main.temp;
