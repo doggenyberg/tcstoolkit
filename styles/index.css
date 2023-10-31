@@ -34,7 +34,8 @@ body {
 }
 
 .top h1 {
-    font-weight: 500;
+    font-weight: 300;
+    font-size: 2.5rem;
 }
 
 .bottom {
@@ -89,8 +90,14 @@ body {
 
 .bottom .left .weather .temp-container {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     font-size: 2.5rem;
+}
+
+.bottom .left .weather .temp-container p {
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 .mid {
