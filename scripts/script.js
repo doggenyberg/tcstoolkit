@@ -1,14 +1,22 @@
-// -- Clock & weather widget -- //
+// -- Import HTML elements
 
-// import HTML elements
+// widget info
 const clock = document.getElementById("clock");
 const day = document.getElementById("day");
 const dateMonthYear = document.getElementById("dateMonthYear");
 const temp = document.getElementById("temp");
 
+// link-buttons
 const aftonbladetBtn = document.getElementById("aftonbladet");
 const foodCoBtn = document.getElementById("foodCo");
 const teleoptiBtn = document.getElementById("teleopti");
+
+// modals
+const mChecklista = document.getElementById("mChecklista");
+mChecklista.showModal();
+
+// modal buttons
+const mCloseBtn = document.querySelectorAll("mCloseBtn");
 
 // function to open links on link-buttons
 function openLink(button) {
@@ -16,12 +24,26 @@ function openLink(button) {
         case "aftonbladet":
             window.open("https://www.aftonbladet.se/", "_blank");
             break;
+        case "foodCo":
+            window.open("https://www.foodandco.se/restauranger/restauranger/kista/");
+            break;
+        case "teleopti":
+            window.open("https://mytime.comhem.com/TeleoptiWFM/Web/MyTime#Schedule");
+            break;
     }
 }
 
 // eventlisteners for link-buttons
 aftonbladetBtn.addEventListener("click", function() {
     openLink("aftonbladet");
+});
+
+foodCoBtn.addEventListener("click", function() {
+    openLink("foodCo");
+});
+
+teleoptiBtn.addEventListener("click", function() {
+    openLink("teleopti");
 });
 
 // update HTML elements
