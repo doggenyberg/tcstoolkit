@@ -15,6 +15,10 @@ const teleoptiBtn = document.getElementById("teleopti");
 const mChecklista = document.getElementById("mChecklista");
 
 // modal buttons
+const mBtnChecklista = document.getElementById("btnChecklista");
+const mBtnEskalera = document.getElementById("btnEskalera");
+const mBtnMallar = document.getElementById("btnMallar");
+const mBtnLankar = document.getElementById("btnLankar");
 const mCloseBtns = document.querySelectorAll(".mCloseBtn");
 
 // function to open links on link-buttons
@@ -134,6 +138,12 @@ async function updateWeather() {
     temp.innerHTML = `${Math.round(dataTemp)}°`;
 }
 
+// functions that opens modals
+mBtnChecklista.addEventListener('click', () => {
+    mChecklista.showModal();
+});
+
+// funtion that closes the modal for every dialogbox
 mCloseBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         mChecklista.close();
